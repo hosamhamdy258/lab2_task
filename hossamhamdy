@@ -1,1 +1,67 @@
 welcome
+#starting steps
+git clone git@github.com:hosamhamdy258/lab2_task.git
+touch hossamhamdy file2
+git add .
+git status 
+git commit -m "1st comment to repo"
+
+#creating branches and files
+git branch dev
+git branch test
+git checkout dev
+touch dev_file1 dev_file2 -- put some lines
+git add .
+git commit -m "dev branch to repo"
+git push origin dev
+
+git checkout main
+
+git checkout test 
+touch test_file1 test_file2 -- put some lines
+git add .
+git commit -m "test branch to repo"
+git push origin test
+
+#merge branches
+git checkout main
+git merge dev
+git merge test
+
+git add .
+git commit -m "main branch to repo after merge branches"
+git push origin dev
+
+
+#create annotated tag
+git tag -a v1.4 -m "my first tag"
+
+#show tag
+git tag
+
+#show tag
+git show v1.4
+
+#push tag
+git push origin v1.4
+
+#delete local tag
+git tag -d v1.4
+
+#delete remote tag
+git push --delete origin v1.4
+
+#delete branch "you can't delete effective branch switch to other branch"
+#merged branch
+git branch -d dev
+#not merged branch
+git branch -D dev
+
+#remove remote branch
+git push origin :dev
+
+
+#frequently used commands
+git status 
+git branch 
+
